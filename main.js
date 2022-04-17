@@ -1,5 +1,8 @@
-function preload() {
+lipsX=0;
+lipsY=0;
 
+function preload() {
+red_lips = 'https://i.postimg.cc/bJc7z4Zb/l1.png';
 }
 
 function setup(){
@@ -18,8 +21,12 @@ poseNet.on('pose',gotPoses);
 function draw()
 {
     image(video,0,0,400,400);
-        
-}
+    fill(255,0,0,);
+    stroke(255,0,0);
+    circle(lipsX,lipsY, 20);
+    image(red_lips,lipsX,lipsY,30,30);
+}    
+
 
 function take_snapshot(){
 save("myLipsFilter.jpg");
@@ -34,8 +41,8 @@ function modelLoaded() {
         if(results.length = 0) 
         {
             console.log(results);
-            console.log(results = "lips x = " + results[0].pose.lips.x);
-            console.log(results = "lips y = " + results[0].pose.lips.y);
+            console.log("lips x = " + lipsX[0]);
+            console.log("lips y = " + lipsY[0]);
         }
     
     } 
