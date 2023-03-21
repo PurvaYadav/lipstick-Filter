@@ -1,0 +1,19 @@
+h3 {
+    font-size: 30px !important;    
+    }
+    
+    .btn-success:hover {
+    background-color:cyan;
+    }
+    
+    canvas {
+    border: 5px;
+    animation-name: example;
+    animation-duration: 60s;
+    animation-timing-function:infinite;
+    }
+    
+    @keyframes example {
+    from {box-shadow: 1px 1px 38px darkmagenta;}
+    to {box-shadow: 1px 1px 38px darkblue;}
+    }
